@@ -1,0 +1,331 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway";
+}
+
+/*nav bar*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 1500px;
+}
+
+body {
+  background: black;
+  color: white;
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.menu {
+  font-size: 25px;
+  background: black;
+  height: 6rem; 
+}
+
+.menu ol {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0; 
+}
+
+.menu > ol {
+  max-width: 1000px;
+  padding: 0 rem;
+  display: flex; 
+}
+
+.menu > ol > .menu-btn {
+  flex: 1;
+  padding: 1.5rem 0; 
+}
+
+.menu > ol > .menu-btn:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  bottom: 5px;
+  background: #FECEAB;
+  will-change: transform;
+  transform: scale(0);
+  transition: transform 0.2s ease; 
+}
+
+.menu > ol > .menu-btn:hover:after {
+  transform: scale(1); 
+}
+
+.menu-btn {
+  position: relative;
+  line-height: 2.5rem;
+  text-align: center; 
+}
+
+.menu-btn a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  color: white; 
+}
+
+.dropdown .menu-btn {
+  padding: 0.75rem 0;
+  background: #474747;
+  opacity: 0;
+  transform-origin: bottom;
+  animation: enter 0.2s ease forwards; 
+}
+
+.dropdown .menu-btn:nth-child(1) {
+  animation-duration: 0.2s;
+  animation-delay: 0s; 
+}
+
+.dropdown .menu-btn:nth-child(2) {
+  animation-duration: 0.3s;
+  animation-delay: 0.1s; 
+}
+
+.dropdown .menu-btn:nth-child(3) {
+  animation-duration: 0.4s;
+  animation-delay: 0.2s; 
+}
+
+.dropdown .menu-btn:hover {
+  background: #F8B195; 
+}
+
+.dropdown .menu-btn a {
+  padding: 0 0.75rem; }
+  @media screen and (max-width: 600px) 
+{
+
+    
+.menu {
+  position: relative; 
+}
+
+.menu:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 1rem;
+  width: 30px;
+  height: 4px;
+  background: white;
+  box-shadow: 0 10px white, 0 -10px white; 
+}
+    
+.menu > ol > .menu-btn {
+  flex: 0;
+  opacity: 0;
+  animation: enter 0.3s ease-out forwards; 
+}
+
+.menu > ol > .menu-btn:nth-child(1) {
+  animation-delay: 0s; 
+}
+
+.menu > ol > .menu-btn:nth-child(2) {
+  animation-delay: 0.1s; 
+}
+    
+.menu > ol > .menu-btn:nth-child(3) {
+  animation-delay: 0.2s; 
+}
+    
+.menu > ol > .menu-btn:nth-child(4) {
+  animation-delay: 0.3s; 
+}
+    
+.menu > ol > .menu-btn:nth-child(5) {
+  animation-delay: 0.4s; 
+}
+    
+.menu > ol > .menu-btn + .menu-btn {
+  margin-top: 0.75rem; 
+}
+
+.menu > ol > .menu-btn:after {
+  left: auto;
+  right: 1rem;
+  bottom: calc(50% - 2px); 
+}
+    
+.menu > ol > .menu-btn:hover {
+  z-index: 1; 
+}
+    
+.menu:hover > ol {
+  display: flex; 
+}
+    
+.menu:hover:after {
+  box-shadow: none; } 
+  }
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 1; }
+  .menu-btn:hover > .dropdown {
+    display: block; }
+  @media screen and (max-width: 600px) {
+    .dropdown {
+      width: 100vw;
+      left: -2rem;
+      top: 50%;
+      transform: translateY(-50%); } }
+
+* {
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: scaleY(0.98) translateY(10px); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*title*/
+.parallaxindex {
+  background-image: url("../Images/shenkmanbuilding.jpg");
+  min-height: 500 px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.parallax-title {
+  font-size: 65px;
+}
+
+/*intro*/
+.intro {
+  margin: 11rem 2rem 0;
+}
+
+.subtitle {
+  font-size: 4.5rem;
+}
+
+.intro-text {
+  margin: 2rem 0;
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+
+/*slogan*/
+.slogan h3 {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 700px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*programs*/
+.group1 {
+  display: flex;
+  justify-content: ;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contain1 p {
+  margin-bottom: 2rem;
+}
+
+/* Section Five */
+
+.group2 {
+  flex-direction: row-reverse;
+}
+
+.contain2 p {
+  margin-bottom: 2rem;
+}
+
+/* Section Six */
+
+.contain3 p {
+  margin-bottom: 2rem;
+}
+
+/* Flex Group Mobile */
+
+@media (max-width: 800px) {
+  .group1 {
+    flex-direction: column;
+  }
+}
+/**/
+
+.photos {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 700px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contain:hover .photos {
+  opacity: 0.3;
+}
+
+.contain:hover .middle {
+  opacity: 1;
+}
+
+.txt {
+  background-color: #F8B195;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
